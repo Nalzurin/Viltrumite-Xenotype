@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>V_SuperhumanSpeed</defName>
+    <label>Super human speed</label>
+    <description>Viltrumites can move at tremendous speeds, able to travel anywhere in the world in mere minutes if not seconds. Their reflexes and reaction time likewise operate at similar speeds.</description>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statOffsets>
+          <MoveSpeed>2</MoveSpeed>
+          <MeleeDodgeChance>0.5</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>V_SuperhumanStrength</defName>
+    <label>Super human strength</label>
+    <description>A Viltrumite's strength extends to the ability to lift and press several tons, making them a powerhouse in combat situations. This strength allows them to go toe-to-toe with formidable foes. Using proper precision in their strength, Viltrumites easily able to behead, impale or cut open targets with their bare hands.</description>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <statFactors>
+          <MeleeDamageFactor>4</MeleeDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <CarryingCapacity>2000</CarryingCapacity>
+          <MeleeHitChance>0.9</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>V_SuperhumanResilience</defName>
+    <label>Super human resilience</label>
+    <description>Viltrumite bodies are incredibly resilient, allowing them to withstand a wide range of attacks without sustaining any significant harm. They are unfazed by virtually any environment, or lack thereof. They can walk away unscathed from explosions, bullets, and even powerful energy-based assaults.</description>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <hungerRateFactor>0.1</hungerRateFactor>
+
+        <statFactors>
+          <InjuryHealingFactor>10</InjuryHealingFactor>
+          <IncomingDamageFactor>0.25</IncomingDamageFactor>
+        </statFactors>
+        <statOffsets>
+          <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+          <ComfyTemperatureMax>150</ComfyTemperatureMax>
+          <ArmorRating_Sharp>2.0</ArmorRating_Sharp>
+          <ArmorRating_Blunt>2.0</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.8</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>V_InnerEarEquilibrium</defName>
+    <label>Inner ear equilibrium</label>
+    <description>Viltrumites posses a complex balancing system located in their inner ears that enables their superhuman feats.</description>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>0.3</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>V_InnerEarDisrupted</defName>
+    <label>Disrupted equilibrium</label>
+    <description>Disrupted equilibrium of the inner ears, causes severe pain and cripples viltrumite's powers. Equilibrium will be restored on its own, but continued disruption will lead to more severe symptoms and eventually death.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <lethalSeverity>5</lethalSeverity>
+    <maxSeverity>5</maxSeverity>
+    <makesSickThought>true</makesSickThought>
+    <initialSeverity>1</initialSeverity>
+    <canApplyDodChanceForCapacityChanges>true</canApplyDodChanceForCapacityChanges>
+    <stages>
+      <li>
+        <label>mild</label>
+        <minSeverity>1</minSeverity>
+        <painOffset>0.2</painOffset>
+        <capMods>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.3</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>moderate</label>
+        <minSeverity>2</minSeverity>
+        <painOffset>0.4</painOffset>
+        <capMods>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.5</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>severe</label>
+        <minSeverity>3</minSeverity>
+        <painOffset>0.6</painOffset>
+        <capMods>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.7</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>extreme</label>
+        <minSeverity>4</minSeverity>
+        <painOffset>0.8</painOffset>
+        <capMods>
+          <li>
+            <capacity>Hearing</capacity>
+            <offset>-0.9</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Immunizable">
+        <compClass>HediffComp_ImmunizableToxic</compClass>
+        <severityPerDayNotImmune>-3</severityPerDayNotImmune>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>V_Flight</defName>
+    <label>flight</label>
+    <description>Due a complex balancing system located in their inner ears, Viltrumites have the ability to fly. They will ignore terrain movement costs when moving.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <isBad>false</isBad>
+    <abilities>
+      <li>V_FlightMap</li>
+      <li>V_FlightWorld</li>
+    </abilities>
+    <comps>
+      <li Class="AnimalBehaviours.HediffCompProperties_Floating">
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

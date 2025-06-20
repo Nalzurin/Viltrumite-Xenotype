@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <AbilityDef>
+    <defName>V_FlightMap</defName>
+    <label>flight (map)</label>
+    <description>Fly to a distant location</description>
+    <iconPath>UI/Icons/Genes/Flight</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <hostile>false</hostile>
+    <verbProperties>
+      <verbClass>Verb_CastAbilityJump</verbClass>
+      <label>fly</label>
+      <violent>false</violent>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <warmupTime>0.1</warmupTime>
+      <range>100</range>
+      <requireLineOfSight>false</requireLineOfSight>
+      <soundCast>Longjump_Jump</soundCast>
+      <soundLanding>Longjump_Land</soundLanding>
+      <targetParams>
+        <canTargetLocations>true</canTargetLocations>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+      </targetParams>
+    </verbProperties>
+    <jobDef>CastJump</jobDef>
+  </AbilityDef>
+
+  <AbilityDef>
+    <defName>V_FlightWorld</defName>
+    <label>flight (world)</label>
+    <description>Fly to a distant location</description>
+    <iconPath>UI/Icons/Genes/Flight</iconPath>
+    <cooldownTicksRange>10</cooldownTicksRange>
+    <abilityClass>Viltrumites.Ability_FlightWorld</abilityClass>
+    <hostile>false</hostile>
+    <targetRequired>false</targetRequired>
+    <canUseAoeToGetTargets>false</canUseAoeToGetTargets>
+    <statBases>
+      <Ability_EffectRadius>0</Ability_EffectRadius>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0</warmupTime>
+      <range>0</range>
+      <drawAimPie>false</drawAimPie>
+      <requireLineOfSight>false</requireLineOfSight>
+    </verbProperties>
+  </AbilityDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>V_ViltrumiteIncoming</defName>
+    <thingClass>Viltrumites.ViltrumiteIncoming</thingClass>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>ConstantSpeed</movementType>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Fall</anticipationSound>
+      <anticipationSoundTicks>100</anticipationSoundTicks>
+      <motesPerCell>0</motesPerCell>
+      <speed>1</speed>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>V_ViltrumiteLeaving</defName>
+    <thingClass>Viltrumites.ViltrumiteLeaving</thingClass>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>CutoutFlying</shaderType>
+      <drawSize>1.9</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Decelerate</movementType>
+      <reversed>true</reversed>
+      <shadow>Things/Skyfaller/SkyfallerShadowDropPod</shadow>
+      <shadowSize>(2, 2)</shadowSize>
+      <anticipationSound>DropPod_Leaving</anticipationSound>
+      <anticipationSoundTicks>-10</anticipationSoundTicks>
+      <ticksToImpactRange>-40</ticksToImpactRange>
+      <motesPerCell>1</motesPerCell>
+      <angleCurve>
+        <points>
+          <li>(0,10)</li>
+          <li>(1,20)</li>
+        </points>
+      </angleCurve>
+      <speedCurve>
+        <points>
+          <li>(0,0.05)</li>
+          <li>(0.98,0.1)</li>
+        </points>
+      </speedCurve>
+    </skyfaller>
+  </ThingDef>
+
+  <ThingDef>
+    <defName>V_ActiveDropViltrumite</defName>
+    <label>drop viltrumite</label>
+    <category>Item</category>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <thingClass>Viltrumites.ActiveDropViltrumite</thingClass>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <tickerType>Normal</tickerType>
+    <graphicData>
+      <texPath>Things/Special/DropPod</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.9</drawSize>
+      <shadowData>
+        <volume>(0.8, 0.6, 0.8)</volume>
+      </shadowData>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <blockWind>true</blockWind>
+    <useHitPoints>true</useHitPoints>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <Flammability>0</Flammability>
+    </statBases>
+    <selectable>true</selectable>
+  </ThingDef>
+  
+  <WorldObjectDef>
+    <defName>V_TravelingViltrumite</defName>
+    <label>viltrumite</label>
+    <description>viltrumite in flight.</description>
+    <worldObjectClass>Viltrumites.TravelingViltrumite</worldObjectClass>
+    <texture>World/WorldObjects/TravelingTransportPods</texture>
+    <useDynamicDrawer>true</useDynamicDrawer>
+    <allowCaravanIncidentsWhichGenerateMap>true</allowCaravanIncidentsWhichGenerateMap>
+  </WorldObjectDef>
+
+</Defs>

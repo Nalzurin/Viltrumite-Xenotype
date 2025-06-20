@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Viltrumite</defName>
+    <label>Viltrumite</label>
+    <description>A race of warriors and planetary conquerors from the planet Viltrum. Gifted with superhuman strength, speed, stamina, endurance, senses, regeneration, nigh-invulnerability, decelerated aging, viltrumites are stronger than regular humans in all aspects.\n Due a complex balancing system located in their inner ears, Viltrumites have the ability to fly. However, when a Viltrumite's equilibrium in their ears is disturbed, mainly by frequency, it can cause extreme pain and may even possibly kill them.</description>
+    <descriptionShort>A race of warriors and planetary conquerors from the planet Viltrum.</descriptionShort>
+    <inheritable>true</inheritable>
+    <chanceToUseNameMaker>1</chanceToUseNameMaker>
+    <iconPath>UI/Icons/Xenotypes/Viltrumite</iconPath>
+    <genes>
+      <li>SensitiveInnerEars</li>
+			<li>ArchiteMetabolism</li>
+			<li>DiseaseFree</li>
+			<li>PerfectImmunity</li>
+			<li>SuperhumanSpeed</li>
+			<li>Superclotting</li>
+			<li>Ears_Human</li>
+			<li>Nose_Human</li>
+			<li>Jaw_Baseline</li>
+			<li>Headbone_Human</li>
+			<li>Voice_Human</li>
+			<li>Body_Standard</li>
+			<li>Body_Hulk</li>
+			<li>StrongStomach</li>
+			<li>SuperhumanResilience</li>
+			<li>SuperhumanStrength</li>
+			<li>Hands_Human</li>
+			<li>Unstoppable</li>
+      <li>Flight</li>
+      <li>Beard_MoustacheOnly</li>
+      <li MayRequire="kentington.saveourship2">SoS2_VacuumAdapted</li>
+    </genes>
+  </XenotypeDef>
+</Defs>

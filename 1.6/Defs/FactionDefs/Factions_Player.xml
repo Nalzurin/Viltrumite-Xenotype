@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>ViltrumiteAgent</defName>
+    <label>Viltrumite Agent</label>
+    <description>A viltrumite agent and allies.</description>
+    <isPlayer>true</isPlayer>
+    <basicMemberKind>Viltrumite</basicMemberKind>
+    <pawnSingular>agent</pawnSingular>
+    <pawnsPlural>agents</pawnsPlural>
+    <techLevel>Spacer</techLevel>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+    <allowedCultures><li>Astropolitan</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categoriesChildhood>
+          <li>Viltrumite</li>
+        </categoriesChildhood>
+        <categoriesAdulthood>
+          <li>Viltrumite</li>
+        </categoriesAdulthood>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Viltrumite</factionIconPath>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>ClassicStart</li>
+      <li>ClassicStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+</Defs>

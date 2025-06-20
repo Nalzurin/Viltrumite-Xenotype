@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="Human">
+    <defName>Viltrumite</defName>
+    <tools Inherit="false">
+      <li Class="CombatExtended.ToolCE">
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.26</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <armorPenetrationBlunt>100</armorPenetrationBlunt>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>1.26</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <armorPenetrationBlunt>100</armorPenetrationBlunt>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>teeth</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+        <chanceFactor>0.07</chanceFactor>
+        <soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+        <soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+        <armorPenetrationSharp>100</armorPenetrationSharp>
+        <armorPenetrationBlunt>100</armorPenetrationBlunt>
+      </li>
+      <li Class="CombatExtended.ToolCE">
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>25</power>
+        <cooldownTime>4.49</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+        <armorPenetrationBlunt>100</armorPenetrationBlunt>
+      </li>
+    </tools>
+  </ThingDef>
+
+</Defs>

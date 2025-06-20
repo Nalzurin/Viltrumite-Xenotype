@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+	<GeneDef ParentName="GeneMoveSpeedBase">
+		<defName>SuperhumanSpeed</defName>
+		<label>Superhuman Speed</label>
+		<description>Carriers of this gene are extremely fast.</description>
+		<iconPath>UI/Icons/Genes/SuperhumanSpeed</iconPath>
+		<displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+		<biostatMet>0</biostatMet>
+		<biostatCpx>2</biostatCpx>
+    <geneClass>Viltrumites.Gene_SuperhumanSpeed</geneClass>
+	</GeneDef>
+  <GeneDef>
+    <defName>SuperhumanStrength</defName>
+    <label>Superhuman Strength</label>
+    <labelShortAdj>Superstrong</labelShortAdj>
+    <description>Carriers of this gene possess superhuman strength. Ultra-dense muscle fibers make their strikes punch through practically everything. As well as increasing their carry capacity exponentially.</description>
+    <iconPath>UI/Icons/Genes/SuperhumanStrength</iconPath>
+    <displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>3</displayOrderInCategory>
+    <geneClass>Viltrumites.Gene_SuperhumanStrength</geneClass>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>2</biostatCpx>
+  </GeneDef>
+  <GeneDef>
+    <defName>SuperhumanResilience</defName>
+    <label>Superhuman Resilience</label>
+    <description>Carriers of this gene possess superhuman resiliency. allowing them to withstand a wide range of attacks without sustaining any significant harm. They are unfazed by virtually any environment, or lack thereof. They can walk away unscathed from explosions, bullets, and even powerful energy-based assaults.</description>
+    <iconPath>UI/Icons/Genes/Gene_Resilient</iconPath>
+    <displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>4</displayOrderInCategory>
+    <geneClass>Viltrumites.Gene_SuperhumanResilience</geneClass>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>2</biostatCpx>
+  </GeneDef>
+  <GeneDef>
+    <defName>SensitiveInnerEars</defName>
+    <label>Sensitive Inner Ears</label>
+    <description>Carriers of this gene possess delicately balanced, sensitive inner ears to accommodate their powers.Thus, certain sounds and frequencies can actually destabilize a Viltrumites equilibrium, causing them to experience severe pain and crippling them by directly attacking their inner ear.</description>
+    <iconPath>UI/Icons/Genes/Gene_SensitiveInnerEars</iconPath>
+    <displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>1</displayOrderInCategory>
+    <geneClass>Viltrumites.Gene_SensitiveInnerEars</geneClass>
+    <hediffGiversCannotGive>
+      <li>HearingLoss</li>
+    </hediffGiversCannotGive>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>2</biostatCpx>
+  </GeneDef>
+  <GeneDef>
+    <defName>Flight</defName>
+    <label>Flight</label>
+    <description>Carriers of this gene, due a complex balancing system located in their inner ears, have the ability to fly.</description>
+    <iconPath>UI/Icons/Genes/Flight</iconPath>
+    <displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>5</displayOrderInCategory>
+    <geneClass>Viltrumites.Gene_Flight</geneClass>
+    <biostatMet>0</biostatMet>
+    <biostatCpx>2</biostatCpx>
+  </GeneDef>
+  <GeneDef ParentName="GeneBeardStyleBase">
+    <defName>Beard_MoustacheOnly</defName>
+    <label>only moustaches</label>
+    <labelShortAdj>moustachy</labelShortAdj>
+    <description>Male carriers of this gene experience rapid hair growth on the upper lip and under the nose and are uncomfortable cutting their staches.</description>
+    <iconPath>UI/Icons/Genes/Gene_MoustacheOnly</iconPath>
+    <displayCategory>Viltrumite</displayCategory>
+    <displayOrderInCategory>6</displayOrderInCategory>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>MoustacheOnly</li>
+      </tags>
+    </beardTagFilter>
+    <symbolPack>
+      <suffixSymbols>
+        <li>
+          <symbol>moustache</symbol>
+        </li>
+        <li>
+          <symbol>stache</symbol>
+        </li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+</Defs>

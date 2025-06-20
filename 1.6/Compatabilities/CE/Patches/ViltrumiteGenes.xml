@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/PawnKindDef[defName="Viltrumite"]/race</xpath>
+    <value>
+      <race>Viltrumite</race>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HediffDef[defName="V_SuperhumanResilience"]/stages</xpath>
+    <value>
+      <stages>
+        <li>
+          <statFactors>
+            <InjuryHealingFactor>10</InjuryHealingFactor>
+            <IncomingDamageFactor>0.25</IncomingDamageFactor>
+          </statFactors>
+          <statOffsets>
+            <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+            <ComfyTemperatureMax>150</ComfyTemperatureMax>
+            <ArmorRating_Sharp>150.0</ArmorRating_Sharp>
+            <ArmorRating_Blunt>100.0</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.8</ArmorRating_Heat>
+          </statOffsets>
+        </li>
+      </stages>
+
+    </value>
+  </Operation>
+</Patch>
