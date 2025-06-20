@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef>
+    <defName>Viltrumite</defName>
+    <label>viltrumite</label>
+    <race>Human</race>
+    <combatPower>200</combatPower>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Viltrumite</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <defaultFactionType>PlayerColony</defaultFactionType>
+    <chemicalAddictionChance>0</chemicalAddictionChance>
+    <isFighter>true</isFighter>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Viltrumite>999</Viltrumite>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelMoney>0~2500</apparelMoney>
+    <apparelTags>
+      <li>IndustrialAdvanced</li>
+    </apparelTags>
+    <apparelRequired>
+      <li>Apparel_CollarShirt</li>
+      <li>Apparel_Pants</li>
+    </apparelRequired>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelIgnorePollution MayRequire="Ludeon.RimWorld.Biotech">true</apparelIgnorePollution>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsMoney>1000~2000</techHediffsMoney>
+    <techHediffsTags>
+      <li>Simple</li>
+      <li>Advanced</li>
+    </techHediffsTags>
+    <initialWillRange>0</initialWillRange>
+    <initialResistanceRange>0~1</initialResistanceRange>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <Psychopath>0</Psychopath>
+    </forcedTraits>
+  </PawnKindDef>
+</Defs>

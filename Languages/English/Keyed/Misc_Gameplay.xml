@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+  <V_ViltrumiteArrived>{PAWN_nameDef} have arrived.</V_ViltrumiteArrived>
+  <V_FlyTo>Fly here</V_FlyTo>
+  <V_FlyWorld>Fly</V_FlyWorld>
+  <V_FlyWorldDesc>Fly to a specified location</V_FlyWorldDesc>
+</LanguageData>

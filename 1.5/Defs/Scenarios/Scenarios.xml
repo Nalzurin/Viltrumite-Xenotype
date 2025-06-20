@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ScenarioDef>
+    <defName>Viltrumite</defName>
+    <label>The Viltrumite Agent</label>
+    <description>You are one of the elite, a Viltrumite tasked by the empire to subjugate this distant rimworld. Its inhabitants—mostly fragile baseline humans and weaker xenotypes—are no match for your strength. Your mission is clear: establish a foothold, conquer the planet, and pave the way for the Viltrum Empire.\n\nNote: With your superior strength, most threats will be trivial, but isolation and resource scarcity may still pose challenges.</description>
+    <scenario>
+      <summary>A powerful Viltrumite sent to prepare a rimworld for conquest.</summary>
+      <playerFaction>
+        <def>PlayerFaction</def>
+        <factionDef>ViltrumiteAgent</factionDef>
+      </playerFaction>
+      <parts>
+
+        <!-- Game start dialog -->
+        <li Class="ScenPart_GameStartDialog">
+          <def>GameStartDialog</def>
+          <text>You are one of the elite, a Viltrumite tasked by the empire to subjugate this distant rimworld. Its inhabitants—mostly fragile baseline humans and weaker xenotypes—are no match for your strength. Your mission is clear: establish a foothold, conquer the planet, and pave the way for the Viltrum Empire.</text>
+          <closeSound>GameStartSting</closeSound>
+        </li>
+
+        <!-- Config pages -->
+        <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
+          <def>ConfigurePawnsKindDefs</def>
+          <pawnChoiceCount>4</pawnChoiceCount>
+          <leftBehindPawnKind>Viltrumite</leftBehindPawnKind>
+          <kindCounts>
+            <li>
+              <kindDef>Viltrumite</kindDef>
+              <count>1</count>
+              <requiredAtStart>true</requiredAtStart>
+            </li>
+          </kindCounts>
+        </li>
+
+        <!-- Player starting stuff spawn method-->
+        <li Class="ScenPart_PlayerPawnsArriveMethod">
+          <def>PlayerPawnsArriveMethod</def>
+          <visible>false</visible>
+          <method>Standing</method>
+        </li>
+      </parts>
+    </scenario>
+  </ScenarioDef>
+
+
+</Defs>

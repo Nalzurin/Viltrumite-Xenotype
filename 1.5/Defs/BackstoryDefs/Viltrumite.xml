@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BackstoryDef>
+    <defName>viltumiteChild1</defName>
+    <title>Planetary Enforcer Trainee</title>
+    <titleFemale>enforcer</titleFemale>
+    <titleShort>enforcer</titleShort>
+    <titleShortFemale>enforcer</titleShortFemale>
+    <description>Born into the militaristic and expansionist Viltrum Empire, [PAWN_nameDef] was trained from an early age to subdue and conquer worlds. As a child, [PAWN_pronoun] was taught the art of warfare, strategic dominance, and the importance of Viltrumite superiority. Sparring matches were brutal, and weakness was never tolerated.\n By the age of ten, [PAWN_pronoun] had already seen more combat than most humans experience in a lifetime.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Viltrumite</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>4</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Caring</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+  
+  <BackstoryDef>
+    <defName>viltumiteChild2</defName>
+    <title>Elite Cadet</title>
+    <titleFemale>cadet</titleFemale>
+    <titleShort>cadet</titleShort>
+    <titleShortFemale>cadet</titleShortFemale>
+    <description>Selected for [PAWN_pronoun] genetic potential, [PAWN_nameDef] was part of an elite group of young Viltrumites, groomed to become future enforcers of the empire. Days were spent in rigorous combat training, while nights were filled with lessons on Viltrumite history and dominance. Failure was not an option, and those who couldn’t keep up were discarded.</description>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>Viltrumite</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>3</Melee>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>viltumiteAdult1</defName>
+    <title>Viltrumite Conqueror</title>
+    <titleFemale>conqueror</titleFemale>
+    <titleShort>conqueror</titleShort>
+    <titleShortFemale>conqueror</titleShortFemale>
+    <description>After completing [PAWN_pronoun] brutal training, [PAWN_nameDef] was deployed to distant planets to crush opposition and bring entire civilizations to heel for the Viltrum Empire. With overwhelming strength and near-invincibility, [PAWN_pronoun] carved through armies and enforced the will of the empire with ruthless efficiency.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Viltrumite</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>8</Melee>
+      <Construction>2</Construction>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+      <li>Caring</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+  <BackstoryDef>
+    <defName>viltumiteAdult2</defName>
+    <title>Galactic Subjugator</title>
+    <titleFemale>subjugator</titleFemale>
+    <titleShort>subjugator</titleShort>
+    <titleShortFemale>subjugator</titleShortFemale>
+    <description>After years of honing [PAWN_pronoun] skills, [PAWN_nameDef] became a seasoned Viltrumite warrior, sent to bend entire planets to the will of the empire. Through sheer power and relentless brutality, [PAWN_pronoun] led campaigns that left entire populations in ruin. Now, on this rimworld, [PAWN_nameDef] must prepare it for the inevitable arrival of the Viltrum Empire.</description>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>Viltrumite</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>8</Melee>
+      <Mining>4</Mining>
+    </skillGains>
+    <workDisables>
+      <li>Artistic</li>
+      <li>Social</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+</Defs>
