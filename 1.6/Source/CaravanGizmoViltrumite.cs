@@ -22,15 +22,14 @@ namespace Viltrumites
         {
             return AccessTools.Method(typeof(Caravan_PathFollower), "IsPassable");
         }
-        private static bool Postfix(bool result, Caravan ___caravan)
+        private static bool Postfix(bool __result, PlanetTile tile, Caravan_PathFollower __instance)
         {
             
-            if (___caravan.PawnsListForReading.Count == 1 && ___caravan.PawnsListForReading[0].genes.HasActiveGene(Definitions.Flight))
+            if (__instance.caravan.PawnsListForReading.Count == 1 && __instance.caravan.PawnsListForReading[0].genes.HasActiveGene(Definitions.Flight))
             {
-
                 return true;
             }
-            return result;
+            return __result;
         }
     }
 
@@ -40,7 +39,7 @@ namespace Viltrumites
     {
         private static MethodBase TargetMethod()
         {
-            return AccessTools.Method(typeof(Caravan_PathFollower), "CostToMove", new Type[] {typeof(int), typeof(int)});
+            return AccessTools.Method(typeof(Caravan_PathFollower), "CostToMove", new Type[] {typeof(PlanetTile), typeof(PlanetTile) });
         }
         private static int Postfix(int result, Caravan ___caravan)
         {

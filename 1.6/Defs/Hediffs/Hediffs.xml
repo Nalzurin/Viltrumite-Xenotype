@@ -157,7 +157,7 @@
       <li>V_FlightWorld</li>
     </abilities>
     <comps>
-      <li Class="AnimalBehaviours.HediffCompProperties_Floating">
+      <li Class="VEF.AnimalBehaviours.HediffCompProperties_Floating">
       </li>
     </comps>
   </HediffDef>

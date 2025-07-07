@@ -87,6 +87,7 @@ namespace Viltrumites
             PawnGenerationRequest request = new PawnGenerationRequest(tile: tile, mustBeCapableOfViolence: false, colonistRelationChanceFactor: 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: true, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, biocodeWeaponChance: 0.1f, kind: PawnKindDefOf.Colonist, faction:Faction.OfPlayer, forceGenerateNewPawn: true, allowDead: false, allowDowned: true, canGeneratePawnRelations: true, biocodeApparelChance: 1f, validatorPreGear: null, validatorPostGear: null, minChanceToRedressWorldPawn: null, fixedBiologicalAge: null, fixedChronologicalAge: null, fixedLastName: null, fixedBirthName: null, fixedTitle: null, fixedIdeo: null, forceNoIdeo: false, forceNoBackstory: false, forbidAnyTitle: false, forceDead: false, forcedXenogenes: null, forcedEndogenes: null, forcedXenotype: null, forcedCustomXenotype: null, allowedXenotypes: null, forceBaselinerChance: 0f);
             tempPawn = PawnGenerator.GeneratePawn(request);
             Transporter.innerContainer.TryAdd(tempPawn);
+
             TransporterUtility.InitiateLoading(Gen.YieldSingle(Transporter));
             Find.WorldTargeter.BeginTargeting(ChoseWorldTarget, canTargetTiles: true, TargeterMouseAttachment, closeWorldTabWhenFinished: true, delegate
             {
@@ -392,7 +393,7 @@ namespace Viltrumites
         public void ArrivedOverride()
         {
             Traverse traverse = Traverse.Create(this).Field("arrived");
-            Traverse traverse2 = Traverse.Create(this).Field("pods");
+            Traverse traverse2 = Traverse.Create(this).Field("transporters");
             if (traverse.GetValue<bool>())
             {
                 return;
